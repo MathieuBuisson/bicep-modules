@@ -1,0 +1,2 @@
+# Ignore ARM templates transpiled by Bicep
+modules/**/*.json

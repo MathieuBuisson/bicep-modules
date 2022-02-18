@@ -1,0 +1,21 @@
+{
+    "files.insertFinalNewline": true,
+    "editor.formatOnPaste": true,
+    "json.format.enable": true,
+    "powershell.codeFormatting.alignPropertyValuePairs": true,
+    "powershell.codeFormatting.ignoreOneLineBlock": true,
+    "powershell.codeFormatting.newLineAfterCloseBrace": true,
+    "powershell.codeFormatting.newLineAfterOpenBrace": true,
+    "powershell.codeFormatting.openBraceOnSameLine": true,
+    "powershell.scriptAnalysis.enable": true,
+    "[markdown]": {
+        "files.trimTrailingWhitespace": false
+    },
+    "[yaml]": {
+        "editor.detectIndentation": false,
+        "editor.insertSpaces": true,
+        "editor.tabSize": 2,
+        "editor.autoIndent": "none",
+        "editor.formatOnPaste": false
+    }
+}
