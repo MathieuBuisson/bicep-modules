@@ -21,19 +21,19 @@ param environment string
 ])
 param location string
 
-var regionCodeMap = {
+var regionAbbreviations = {
   northeurope: 'ne'
   northcentralus: 'nus'
   centralus: 'cus'
   australiasoutheast: 'ase'
 }
 
-var regionCode = regionCodeMap[location]
+var regionAbbreviation = regionAbbreviations[location]
 
 // 3-character suffix to add some uniqueness for resources which require a globally unique name
 var suffix = toLower(take(uniqueString(resourceGroup().id, application, environment, location), 3))
 
-output storageAccountName string = 'st${application}${environment}${regionCode}${suffix}'
-output appServicePlanName string = 'plan-${application}-${environment}-${regionCode}'
-output functionAppName string = 'func-${application}-${environment}-${regionCode}-${suffix}'
-output keyVaultName string = 'kv${application}${environment}${regionCode}${suffix}'
+output storageAccountName string = 'st${application}${environment}${regionAbbreviation}${suffix}'
+output appServicePlanName string = 'plan-${application}-${environment}-${regionAbbreviation}'
+output functionAppName string = 'func-${application}-${environment}-${regionAbbreviation}-${suffix}'
+output appInsightsName string = 'appi-${application}-${environment}-${regionAbbreviation}'
